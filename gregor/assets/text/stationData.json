@@ -1,0 +1,88 @@
+{
+    "contents": [
+        {
+            "text": "참고로 기차는 하루에 두 번만 출발하니 시간을 맞추어 출발하시는게 좋을 거 같습니다.",
+            "characterName": "???",
+            "images":[
+              {"imageKey": "station","showImage": false},
+              {"imageKey": "harmatz","showImage": true}
+            ],
+            "delay":500
+        },
+        {
+          "text": "...",
+          "characterName": "",
+          "images":[
+              {"imageKey": "harmatz","showImage": false}
+            ],
+          "delay":100
+        },
+        {
+            "text": "그레고리는 요제프의 제안을 수락하기로 결심한다. \n요제프는 그의 능력과 과거 경험을 언급하며, 저택의 비밀이 그레고리에게도 의미가 있을 것이라고 암시한다. \n하지만 그레고리는 요제프의 말에 귀를 기울이면서도, 그의 눈빛에서 느껴지는 불신을 무시할 수 없었다.",
+            "characterName": "",
+            "images":[
+                {"imageKey": "textbox","showImage": true},
+                {"imageKey": "gregor","showImage": true,"color":"#808080"},
+                {"imageKey": "harmatz","showImage": true,"color":"#808080"}
+              ],
+            "delay":100
+        },
+        {
+            "text": "그레고리는 이 일이 단순히 돈을 위한 것이 아니라, 자신의 과거에서 벗어나 더 나은 삶을 추구하는 기회라고 생각하기 시작한다. \n저택이 자신에게 어떤 비밀을 숨기고 있을지도 모르지만, 그는 그 그림자를 마주하는 대신 회피하고 싶어하는 마음이 크다. \n불안한 감정과 호기심이 뒤섞이지만, 그는 결심을 굳히고 이 기회를 놓치지 않기로 한다.",
+            "characterName": "",
+            "images":[
+                {"imageKey": "textbox","showImage": true},
+                {"imageKey": "gregor","showImage": true,"color":"#808080"},
+                {"imageKey": "harmatz","showImage": true,"color":"#808080"}
+              ],
+            "delay":100
+        },
+        {
+            "text": "왜 하필 나인가... 하지만 뭔가 나를 이끌고 있다.",
+            "characterName": "그레고리",
+            "images":[
+                {"imageKey": "gregor","showImage": true},
+                {"imageKey": "harmatz","showImage": false},
+                {"imageKey": "station","showImage": true}
+              ],
+            "delay":100
+        },
+        {
+            "text": "(담배를 한 대 피우며 심호흡을 한다.)",
+            "characterName": "그레고리",
+            "images":[
+                {"imageKey": "gregor","showImage": true}
+              ],
+            "delay":100
+        },
+        {
+            "text": "이 기회를 놓치고 싶지 않아. 어쩌면 더 나아가 지금 삶을 청산할 수 있겠지",
+            "characterName": "그레고리",
+            "images":[
+                {"imageKey": "gregor","showImage": true}
+              ],
+            "delay":100
+        },
+        {
+          "text": "",
+            "characterName": "",
+            "images":[
+                {"imageKey": "gregor","showImage": false},
+                {"imageKey": "textbox","showImage": false},
+                {"imageKey": "Rumen","showImage": true}
+              ],
+            "delay":100
+        },
+        {
+            "text": "그레고리는 내면의 경고를 무시하고 결심을 다진다. \n그의 무표정 속에는 결단이 담겨 있지만, 자신도 모르게 위험한 운명으로 빠져들고 있다는 사실은 인지하지 못한다. \n저택의 비밀이 그를 기다리고 있다는 것을 모른채, 그는 그 길을 계속 나아가기로 한다.",
+            "characterName": "",
+            "images":[
+                {"imageKey": "gregor","showImage": true,"color":"#808080"},
+                {"imageKey": "Rumen","showImage": false},
+                {"imageKey": "textbox","showImage": true}
+              ],
+            "delay":100
+        }
+    ]
+}
+  

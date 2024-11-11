@@ -1,0 +1,21 @@
+{
+  "contents": [
+      {
+          "text": "역시 대단하시군요, 이 동네에서 제일 저명한 탐정 나으리...",
+          "characterName": "???",
+          "images":[
+            {"imageKey": "harmatz","showImage": true}
+          ],
+          "delay":500
+      },
+      {
+        "text": "... 그래서? 무슨 일인거죠?",
+        "characterName": "그레고르",
+        "images":[
+            {"imageKey": "gregor","showImage": true},
+            {"imageKey": "harmatz","showImage": true,"color":"#808080"}
+          ],
+        "delay":100
+        }
+  ]
+}
