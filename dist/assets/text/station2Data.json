@@ -1,0 +1,99 @@
+{
+    "contents": [
+        {
+            "text": "(기차로 이동하는 그레고르, 밖의 분위기와 다르게 열차를 대기하는 곳은 수상하리만치 조용하다.)",
+            "characterName": "",
+            "images":[
+            ],
+            "delay":100
+        },
+        {
+          "text": "",
+          "characterName": "",
+          "images":[
+          ],
+          "delay":100
+      },
+      {
+        "text": "(기차가 들어오는 소리가 들리고, 그레고르는 내면의 경고를 무시한채 결심을 다진다. \n직면해서는 안되는, 마주 보아서는 안되는 심연이 그를 기다리고 있다는 것을 모른채,\n 그는 계속 나아가기로 결정한다.)",
+        "characterName": "",
+        "images":[
+        ],
+        "delay":100
+      },
+      {
+        "text": "",
+        "characterName": "",
+        "images":[
+          {"imageKey": "textbox","showImage": false},
+          {"imageKey": "station","showImage": false}
+        ],
+        "delay":100
+      },
+        {
+          "text": "(얼마나 끝없이 달려왔을까 어두운 밤이 되고서야 신더포드로 향하는 기차는 도착한다.)",
+          "characterName": "",
+          "images":[
+            {"imageKey": "textbox","showImage": true},
+            {"imageKey": "train","showImage": true}
+          ],
+          "soundKey":"train_run",
+          "delay":100
+      },
+      {
+        "text": "(매우 어두운 시골 동네, 하지만 그레고르에게는 매우 애증의 공간이기도 한 듯 내리자마자 멍하니 서있는 그레고르)",
+        "characterName": "",
+        "images":[
+        ],
+        "delay":100
+      },
+     {
+      "text": "(이내 생각이 들어 약도를 확인한다.)",
+      "characterName": "",
+      "images":[
+        {"imageKey": "map","showImage": true}
+      ],
+      "delay":100
+    },
+    {
+      "text": "가까운 거리군... 예전보다 더 어두운 느낌이야.",
+      "characterName": "",
+      "images":[
+       
+        ],
+      "delay":100
+    },
+    {
+      "text": "",
+      "characterName": "",
+      "images":[
+        {"imageKey": "map","showImage": false},
+        {"imageKey": "house","showImage": true}
+        ],
+      "soundKey":"walk",
+      "delay":100
+    },
+    {
+      "text": "(얼마나 걸었을까, 동네와 거리가 먼 매우 장엄한 저택 앞에 다다른 그레고르)",
+      "characterName": "",
+      "images":[
+        ],
+      "delay":100
+      },
+    {
+      "text": "...이 동네에 이런 저택이 있었나? 그것보다 이곳에서 무언가를 해결하라는거였군.",
+      "characterName": "그레고르",
+      "images":[
+        ],
+      "delay":100
+      },
+      {
+        "text": "그나저나... 굳게 잠겨있군.",
+        "characterName": "그레고르",
+        "images":[
+          ],
+        "delay":100
+     }
+    ]
+}
+  

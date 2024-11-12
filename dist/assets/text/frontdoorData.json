@@ -1,0 +1,30 @@
+{
+    "contents": [
+        {
+            "text": "",
+            "characterName": "",
+            "images":[
+            ],
+            "delay":500
+        },
+        {
+            "text": "",
+            "characterName": "",
+            "images":[
+              {"imageKey": "key_get","showImage": true}
+            ],
+            "delay":100
+        },
+        {
+          "text": "누군진 몰라도 지독한 악취미군...\n이걸로 문을 열 수 있겠어",
+          "characterName": "그레고르",
+          "images":[
+              {"imageKey": "textbox","showImage": true},
+              {"imageKey": "gregor","showImage": true},
+              {"imageKey": "key_get","showImage": false}
+            ],
+          "delay":100
+        }
+    ]
+}
+  

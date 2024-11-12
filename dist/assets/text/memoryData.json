@@ -1,0 +1,166 @@
+{
+  "contents": [
+    {
+      "text": "릴리...",
+      "characterName": "그레고르",
+      "images":[
+          {"imageKey": "gregor","showImage": true},
+          {"imageKey": "lily","showImage": true,"color":"#808080"},
+          {"imageKey": "textbox","showImage": true}
+        ],
+      "delay":100
+    },
+    {
+      "text": "",
+      "characterName": "",
+      "images":[
+        ],
+      "soundKey":"lily_memory",
+      "delay":100
+    },
+    {
+      "text": "그레고르, 무슨 생각해?",
+      "characterName": "릴리",
+      "images":[
+          {"imageKey": "gregor","showImage": true,"color":"#808080"},
+          {"imageKey": "lily","showImage": true}
+        ],
+      "delay":100
+    },
+    {
+      "text": "아, 아니야, 돌아가자",
+      "characterName": "그레고르",
+      "images":[
+          {"imageKey": "gregor","showImage": true},
+          {"imageKey": "lily","showImage": true,"color":"#808080"}
+        ],
+      "delay":100
+    },
+    {
+      "text": "...",
+      "characterName": "릴리",
+      "images":[
+          {"imageKey": "gregor","showImage": true,"color":"#808080"},
+          {"imageKey": "lily","showImage": true}
+        ],
+      "delay":100
+    },
+    {
+      "text": "릴리 왜 그래?",
+      "characterName": "그레고르",
+      "images":[
+          {"imageKey": "gregor","showImage": true},
+          {"imageKey": "lily","showImage": true,"color":"#808080"}
+        ],
+      "delay":100
+    },
+    {
+      "text": "날 죽어놓고서?",
+      "characterName": "릴리",
+      "images":[
+          {"imageKey": "gregor","showImage": true,"color":"#808080"},
+          {"imageKey": "lily","showImage": true}
+        ],
+      "color":"#bb0000",
+      "bold":true,
+      "delay":100
+    },
+    {
+      "text": "",
+      "characterName": "",
+      "images":[
+          {"imageKey": "gregor","showImage": false},
+          {"imageKey": "lily","showImage": false},
+          {"imageKey": "textbox","showImage": false},
+          {"imageKey": "office_back","showImage": true}
+        ],
+      "delay":100
+    },
+    {
+      "text": "(노인은 그레고르의 어깨를 잡는다.)",
+      "characterName": "",
+      "images":[
+        {"imageKey": "textbox","showImage": true}
+      ],
+      "delay":100
+    },
+    {
+      "text": "!",
+      "characterName": "그레고르",
+      "images":[
+          {"imageKey": "gregor","showImage": true},
+          {"imageKey": "harmatz","showImage": true}
+        ],
+      "delay":100
+    },
+    {
+      "text": "표정이 안 좋으신데요?",
+      "characterName": "???",
+      "images":[
+          {"imageKey": "gregor","showImage": true,"color":"#808080"},
+          {"imageKey": "harmatz","showImage": true}
+        ],
+      "delay":100
+    },
+    {
+      "text": "아닙니다. 수락하죠.",
+      "characterName": "그레고르",
+      "images":[
+          {"imageKey": "gregor","showImage": true},
+          {"imageKey": "harmatz","showImage": true,"color":"#808080"}
+        ],
+      "delay":100
+    },
+    {
+      "text": "(씨익 웃는 노인)",
+      "characterName": "",
+      "images":[
+        {"imageKey": "textbox","showImage": true}
+      ],
+      "delay":100
+    },
+    {
+      "text": "그럴 줄 알았습니다. 내일 저녁 기차표와 약도를 준비해뒀으니 부탁드리겠습니다.",
+      "characterName": "???",
+      "images":[
+          {"imageKey": "gregor","showImage": true,"color":"#808080"},
+          {"imageKey": "harmatz","showImage": true}
+        ],
+      "delay":100
+    },
+    {
+      "text": "(그레고르는 약도와 기차표를 건네 받고 대답한다.)",
+      "characterName": "",
+      "images":[
+        {"imageKey": "textbox","showImage": true}
+      ],
+      "delay":100
+    },
+    {
+      "text": "예, 해결이 된 후에...\n잠깐 뭘 해야하는거죠?",
+      "characterName": "그레고르",
+      "images":[
+          {"imageKey": "gregor","showImage": true},
+          {"imageKey": "harmatz","showImage": true,"color":"#808080"}
+        ],
+      "delay":100
+    },
+    {
+      "text": "(노인은 일어나 옷을 정리한 뒤, 대답한다.)",
+      "characterName": "",
+      "images":[
+        {"imageKey": "textbox","showImage": true}
+      ],
+      "delay":100
+    },
+    {
+      "text": "도착하고 나서 직접 직면하시면 될 거 같습니다.",
+      "characterName": "???",
+      "images":[
+          {"imageKey": "gregor","showImage": true,"color":"#808080"},
+          {"imageKey": "harmatz","showImage": true}
+        ],
+      "delay":100
+    }
+  ]
+}

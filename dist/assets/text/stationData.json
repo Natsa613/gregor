@@ -1,0 +1,76 @@
+{
+    "contents": [
+        {
+            "text": "",
+            "characterName": "",
+            "images":[
+            ],
+            "soundKey":"stationSound",
+            "delay":100
+        },
+        {
+          "text": "결국 와버렸군...",
+          "characterName": "그레고르",
+          "images":[
+            {"imageKey": "textbox","showImage": true},
+            {"imageKey": "station","showImage": true},
+            {"imageKey": "gregor","showImage": true}
+          ],
+          "delay":500
+      },
+      {
+        "text": "참고로 기차는 하루에 두 번만 출발하니 시간을 맞추어 출발하시는게 좋을 거 같습니다.",
+        "characterName": "???",
+        "images":[
+          {"imageKey": "textbox","showImage": true},
+          {"imageKey": "office_back","showImage": true,"color":"#808080"},
+          {"imageKey": "station","showImage": false},
+          {"imageKey": "harmatz","showImage": true,"color":"#808080"},
+          {"imageKey": "gregor","showImage": false}
+        ],
+        "delay":500
+      },
+     {
+      "text": "... 단순히 돈 때문이 아니야.\n 무언가... 무언가 날 알고 있는 눈치였어.\n 그리고 하필... 신더포드라.",
+      "characterName": "그레고르",
+      "images":[
+        {"imageKey": "textbox","showImage": true},
+        {"imageKey": "station","showImage": true},
+        {"imageKey": "harmatz","showImage": false},
+        {"imageKey": "office_back","showImage": false},
+        {"imageKey": "gregor","showImage": true}
+      ],
+      "delay":500
+    },
+    {
+      "text": "(그레고르는 생각에 단단히 잠겨있다가 이내 발걸음을 옮긴다.)",
+      "characterName": "",
+      "images":[
+       {"imageKey": "harmatz","showImage": false}
+        ],
+      "delay":100
+    },
+    {
+      "text": "기차표가...",
+      "characterName": "그레고르",
+      "images":[
+        ],
+      "delay":100
+    },
+    {
+      "text": "(그레고르는 자신의 주머니에서 기차표와 약도를 확인한다. 그러자 떨어져 나온 하나의 종이)",
+      "characterName": "",
+      "images":[
+        ],
+      "delay":100
+      },
+    {
+      "text": "이건...?",
+      "characterName": "그레고르",
+      "images":[
+        ],
+      "delay":100
+      }
+    ]
+}
+  
