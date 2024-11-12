@@ -2,6 +2,7 @@ import { Asset } from './Asset';
 import { Button } from './Button';
 import { Content } from './Content';
 import { LogPopup } from './LogPopup';
+import { globalVolume } from './ConfigPopup';
 
 export default class talk1Scene extends Phaser.Scene {
     constructor() {
@@ -10,10 +11,15 @@ export default class talk1Scene extends Phaser.Scene {
             new Asset('textbox', './assets/textbox.png'),
             new Asset('logButton', './assets/icon/logButton.png'),
             new Asset('gregor', './assets/character/gregor.png'),
+            new Asset('gregor_hand', './assets/character/gregor_hand.png'),
             new Asset('harmatz', './assets/character/harmatz.png'),
             new Asset('news','./assets/news.png'),
             new Asset('skipButton', './assets/skipButton.png'),
-            new Asset('office_back', './assets/office_back.png')
+            new Asset('office_back', './assets/office_back.png'),
+            new Asset('knock','./assets/sound/knock.mp3'),
+            new Asset('door_open','./assets/sound/door_open.mp3'),
+            new Asset('door_close','./assets/sound/door_close.mp3'),
+            new Asset('backMusic','./assets/sound/TRAVELATOR - Density & Time.mp3')
         ];
         this.content = null;
         this.textEvent = null;
@@ -42,11 +48,14 @@ export default class talk1Scene extends Phaser.Scene {
         const images = {
             'textbox' : this.add.image(this.scale.width / 2, this.scale.height / 2-80, 'textbox').setOrigin(0.5, 0.5).setDepth(10).setScale(1).setVisible(true),
             'gregor': this.add.image(300, 425, 'gregor').setScale(1).setOrigin(0.5, 0.5).setDepth(9).setVisible(false),
+            'gregor_hand': this.add.image(300, 425, 'gregor_hand').setScale(1).setOrigin(0.5, 0.5).setDepth(9).setVisible(false),
             'harmatz': this.add.image(1600, 425, 'harmatz').setScale(1).setOrigin(0.5, 0.5).setScale(-1,1).setDepth(9).setVisible(false),
             'news': this.add.image(this.scale.width / 2, this.scale.height / 2, 'news').setScale(0.9).setOrigin(0.5, 0.5).setDepth(9).setVisible(false),
             'office_back': this.add.image(this.scale.width / 2, this.scale.height / 2, 'office_back').setScale(1).setOrigin(0.5, 0.5).setVisible(true)
         };
-        
+
+        this.backMusic = this.sound.add('backMusic',{loop:true}).setVolume(globalVolume.volume);
+        this.backMusic.play();
     
         const logPopup = new LogPopup(this, this.scale.width / 2, this.scale.height / 2, 600, 700);
     
@@ -57,6 +66,7 @@ export default class talk1Scene extends Phaser.Scene {
             // 현재 Content의 soundKey를 가져온 후 사운드를 재생
             const currentSoundKey = this.content.getCurrentSoundKey(); // 새로 추가할 메서드
             if (currentSoundKey) {
+                this.sound.setVolume(globalVolume.volume);
                 this.sound.play(currentSoundKey); // 효과음 재생
             }
             

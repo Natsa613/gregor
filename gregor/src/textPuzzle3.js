@@ -51,7 +51,7 @@ export default class textPuzzle3 extends Phaser.Scene{
     checkAnswer(answer) {
         if (answer === this.doorPuzzleAnswer) {
             this.doorPuzzleAnswerSheet.hide();
-            this.time.delayedCall(100, () => this.scene.start('intro',{fadeIn:true}));//저택 내부 씬으로 이동
+            this.time.delayedCall(100, () => this.scene.start('endpage',{fadeIn:true}));//저택 내부 씬으로 이동
         } else {
             // 정답이 틀린 경우 처리 (예: 메시지 표기)
             console.log('틀린 답변입니다.');

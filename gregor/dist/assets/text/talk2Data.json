@@ -1,21 +1,70 @@
 {
   "contents": [
       {
-          "text": "역시 대단하시군요, 이 동네에서 제일 저명한 탐정 나으리...",
+          "text": "역시 대단하시군요, 찾아 뵙길 잘했습니다.",
           "characterName": "???",
           "images":[
+            {"imageKey": "gregor","showImage": true,"color":"#808080"},
             {"imageKey": "harmatz","showImage": true}
           ],
           "delay":500
       },
       {
-        "text": "... 그래서? 무슨 일인거죠?",
+        "text": "(마치 그레고르를 알고 있다는 듯 천천히 박수를 치며 그를 칭찬한다.)",
+        "characterName": "",
+        "images":[
+        ],
+        "delay":100
+      },
+      {
+        "text": "그래서... 이러시는 이유가 뭡니까?",
         "characterName": "그레고르",
         "images":[
             {"imageKey": "gregor","showImage": true},
             {"imageKey": "harmatz","showImage": true,"color":"#808080"}
           ],
         "delay":100
-        }
+      },
+      {
+        "text": "(노인은 말 없이 그레고르를 빤히 쳐다보다 입을 연다.)",
+        "characterName": "",
+        "images":[
+        ],
+        "delay":100
+      },
+      {
+        "text": "5일의 밤 사건은 억지로 종결되었습니다. 그리고 엄청나게 큰 비밀을 숨기고 있지요",
+        "characterName": "???",
+        "images":[
+            {"imageKey": "gregor","showImage": true,"color":"#808080"},
+            {"imageKey": "harmatz","showImage": true}
+          ],
+        "delay":100
+      },
+      {
+        "text": "...그래서요?",
+        "characterName": "그레고르",
+        "images":[
+            {"imageKey": "gregor","showImage": true},
+            {"imageKey": "harmatz","showImage": true,"color":"#808080"}
+          ],
+        "delay":100
+      },
+      {
+        "text": "그 비밀을 파헤쳐주십시오.\n증거들이 한 곳, '신더포드 - Cinderford'를 가르키고 있죠.",
+        "characterName": "???",
+        "images":[
+            {"imageKey": "gregor","showImage": true,"color":"#808080"},
+            {"imageKey": "harmatz","showImage": true}
+          ],
+        "delay":100
+      },
+      {
+        "text": "(신더포드라는 말을 듣자마자 잠시 생각에 잠긴다.)",
+        "characterName": "",
+        "images":[
+        ],
+        "delay":100
+      }
   ]
 }

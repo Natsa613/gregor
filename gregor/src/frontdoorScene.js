@@ -8,11 +8,11 @@ export default class frontdoorScene extends Phaser.Scene {
         super({ key: 'frontdoorScene' });
         this.assets = [
             new Asset('textbox', './assets/textbox.png'),
-            new Asset('logButton', './assets/icon/logButton.png'),
             new Asset('gregor', './assets/character/gregor.png'),
-            new Asset('skipButton', './assets/skipButton.png'),
-            new Asset('train', './assets/train.png'),
-            new Asset('frontdoor','./assets/introBackground.jpg')
+            new Asset('door_lock','./assets/door_lock.jpeg'),
+            new Asset('door_unlock','./assets/door_unlock.jpeg'),
+            new Asset('key_get','./assets/key_get.png'),
+            new Asset('unlock','./assets/sound/door_open.mp3')
         ];
         this.content = null;
         this.textEvent = null;
@@ -41,12 +41,43 @@ export default class frontdoorScene extends Phaser.Scene {
         const images = {
             'textbox' : this.add.image(this.scale.width / 2, this.scale.height/2-80, 'textbox').setOrigin(0.5, 0.5).setDepth(10).setScale(1).setVisible(false),
             'gregor': this.add.image(300, 425, 'gregor').setScale(1).setOrigin(0.5, 0.5).setDepth(9).setVisible(false),
-            'train': this.add.image(this.scale.width / 2, this.scale.height / 2, 'train').setScale(1).setOrigin(0.5, 0.5).setVisible(false),
-            'frontdoor': this.add.image(this.scale.width / 2, this.scale.height / 2, 'frontdoor').setScale(1).setOrigin(0.5, 0.5).setVisible(false)
+            'door_lock': this.add.image(this.scale.width / 2, this.scale.height / 2, 'door_lock').setOrigin(0.5, 0.55).setScale(1.1).setVisible(true),
+            'door_unlock': this.add.image(this.scale.width / 2, this.scale.height / 2, 'door_unlock').setOrigin(0.5, 0.55).setScale(1.1).setVisible(false),
+            'key_get': this.add.image(this.scale.width / 2, this.scale.height / 2, 'key_get').setOrigin(0.5, 0.5).setScale(1).setVisible(false)
         };
         
+        this.characterName = this.add.text(100, this.scale.height - 225, "그레고르", 
+            { font: "48px '국립박물관문화재단클래식B'", fill: "#000000" })
+            .setDepth(11).setVisible(false);
+
+        this.line = this.add.text(50, this.scale.height - 135, "...이제 들어갈 수 있겠군", 
+            { font: "24px '국립박물관문화재단클래식B'", fill: "#000000", wordWrap: { width: this.scale.width - 100 } })
+            .setDepth(11).setVisible(false);
     
         const logPopup = new LogPopup(this, this.scale.width / 2, this.scale.height / 2, 600, 700);
+
+        this.lock = new Button(this, this.scale.width / 2, this.scale.height / 2, '', 1, () => {
+            images['textbox'].setVisible(true);
+            this.characterName.setVisible(true);
+            this.line.setVisible(true);
+            
+            // 스페이스바 이벤트를 한 번만 등록
+            if (!this.spaceKeyEventAdded) {
+                this.input.keyboard.on('keydown-SPACE', ()=>{
+                    this.sound.play('unlock');
+                    images['textbox'].setVisible(false);
+                    images['door_lock'].setVisible(false);
+                    images['door_unlock'].setVisible(true);
+                    this.characterName.setVisible(false);
+                    this.line.setVisible(false);
+                    this.time.delayedCall(500, () => this.scene.start('endScene', { fadeIn: true }));
+                });
+                this.spaceKeyEventAdded = true; // 이벤트가 등록되었음을 표시
+            }
+        }, { useImage: false, width: 150, height: 150 });
+        
+
+
     
         const revealText = () => {
             textObject.setText(this.content.addCharToDisplayText());
@@ -129,19 +160,16 @@ export default class frontdoorScene extends Phaser.Scene {
                     console.log('다음 대사로 이동 성공');
                     startRevealText(); // 다음 대사 출력 시작
                 } else {
-                    console.log('모든 대사가 끝났음. 다음 씬으로 이동');
-                    this.scene.start('frontdoorPuzzle', { fadeIn: true }); // 다음 씬으로 이동 //저택 문앞에서 퍼즐 진행
+                    console.log('모든 대사가 끝났음. ');
+                    //this.scene.start('textPuzzle1', { fadeIn: true }); // 다음 씬으로 이동 //저택 문앞에서 퍼즐 진행
+                    images['textbox'].setVisible(false);
+                    images['gregor'].setVisible(false);
+                    characterNameObject.setVisible(false);
+                    textObject.setVisible(false);
                 }
             }
         });
-        
     
-        const skipButton = new Button(this, this.scale.width - 200, this.scale.height - 850, 'skipButton', 0.1, () => {
-            this.scene.start('frontdoorPuzzle', { fadeIn: true });
-        });
-    
-        const logButton = this.add.image(this.scale.width - 100, this.scale.height - 850, 'logButton')
-            .setScale(0.04).setInteractive();
-        logButton.on('pointerdown', () => logPopup.toggleVisibility());
-    }    
+    }   
+             
 }

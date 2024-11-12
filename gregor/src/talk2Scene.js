@@ -2,6 +2,7 @@ import { Asset } from './Asset';
 import { Button } from './Button';
 import { Content } from './Content';
 import { LogPopup } from './LogPopup';
+import { globalVolume } from './ConfigPopup';
 
 export default class talk2Scene extends Phaser.Scene {
     constructor() {
@@ -12,7 +13,8 @@ export default class talk2Scene extends Phaser.Scene {
             new Asset('gregor', './assets/character/gregor.png'),
             new Asset('harmatz', './assets/character/harmatz.png'),
             new Asset('skipButton', './assets/skipButton.png'),
-            new Asset('office_back', './assets/office_back.png')
+            new Asset('office_back', './assets/office_back.png'),
+            new Asset('backMusic','./assets/sound/TRAVELATOR - Density & Time.mp3')
         ];
         this.content = null;
         this.textEvent = null;
@@ -34,9 +36,14 @@ export default class talk2Scene extends Phaser.Scene {
             { font: "48px '국립박물관문화재단클래식B'", fill: "#000000" })
             .setDepth(11);
 
-        const textObject = this.add.text(50, this.scale.height - 135, "", 
-            { font: "24px '국립박물관문화재단클래식B'", fill: "#000000", wordWrap: { width: this.scale.width - 100 } })
-            .setDepth(11);
+            const textObject = this.add.text(50, this.scale.height - 135, "", 
+                { 
+                    font: this.content.isCurrentBold() ? "bold 24px '국립박물관문화재단클래식B'" : "24px '국립박물관문화재단클래식B'", 
+                    fill: this.content.getCurrentColor(), 
+                    wordWrap: { width: this.scale.width - 100 } 
+                })
+                .setDepth(11);
+            
     
         const images = {
             'textbox' : this.add.image(this.scale.width / 2, this.scale.height/2-80, 'textbox').setOrigin(0.5, 0.5).setDepth(10).setScale(1).setVisible(true),
@@ -45,7 +52,9 @@ export default class talk2Scene extends Phaser.Scene {
             'office_back': this.add.image(this.scale.width / 2, this.scale.height / 2, 'office_back').setScale(1).setOrigin(0.5, 0.5).setVisible(true)
         };
         
-    
+        this.backMusic = this.sound.add('backMusic',{loop:true}).setVolume(0.75);
+        //this.backMusic.play();
+        
         const logPopup = new LogPopup(this, this.scale.width / 2, this.scale.height / 2, 600, 700);
     
         const revealText = () => {
@@ -55,6 +64,7 @@ export default class talk2Scene extends Phaser.Scene {
             // 현재 Content의 soundKey를 가져온 후 사운드를 재생
             const currentSoundKey = this.content.getCurrentSoundKey(); // 새로 추가할 메서드
             if (currentSoundKey) {
+                this.sound.setVolume(globalVolume.volume);
                 this.sound.play(currentSoundKey); // 효과음 재생
             }
             
@@ -130,11 +140,12 @@ export default class talk2Scene extends Phaser.Scene {
                     startRevealText(); // 다음 대사 출력 시작
                 } else {
                     console.log('모든 대사가 끝났음. 다음 씬으로 이동');
+                    this.backMusic.stop();
                     this.cameras.main.fadeOut(1500); // 1500ms 동안 페이드 아웃
         
                     // 페이드 아웃 완료 후 다음 씬으로 전환
                     const fadeOutComplete = (camera) => {
-                        this.scene.start('stationScene', { fadeIn: true });//다음씬으로 이동
+                        this.scene.start('memoryScene', { fadeIn: true });//다음씬으로 이동
                         this.cameras.main.off('camerafadeoutcomplete', fadeOutComplete); // 이벤트 리스너 제거
                     };
                 
@@ -145,12 +156,13 @@ export default class talk2Scene extends Phaser.Scene {
         
     
         const skipButton = new Button(this, this.scale.width - 200, this.scale.height - 850, 'skipButton', 0.1, () => {
+            this.backMusic.stop();
             // 페이드 아웃 시작
             this.cameras.main.fadeOut(1500); // 1500ms 동안 페이드 아웃
         
             // 페이드 아웃 완료 후 다음 씬으로 전환
             const fadeOutComplete = (camera) => {
-                this.scene.start('stationScene', { fadeIn: true });
+                this.scene.start('memoryScene', { fadeIn: true });
                 this.cameras.main.off('camerafadeoutcomplete', fadeOutComplete); // 이벤트 리스너 제거
             };
         

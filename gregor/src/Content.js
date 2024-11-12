@@ -28,6 +28,17 @@ export class Content {
         return this.data[this.currentContentIndex].soundKey; // soundKey 반환
     }
 
+    // 현재 글자색 가져오기
+    getCurrentColor() {
+        return this.data[this.currentContentIndex].color || "#000000"; // 기본값은 검정색
+    }
+
+    // 현재 볼드 여부 가져오기
+    isCurrentBold() {
+        return this.data[this.currentContentIndex].bold || false; // 기본값은 false
+    }
+
+
     //현재 텍스트에 대한 딜레이 가져오는 메서드
     getCurrentDelay() {
         return this.data[this.currentContentIndex].delay || 0; // 기본값 0

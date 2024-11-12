@@ -1,0 +1,74 @@
+{
+  "contents": [
+      {
+          "text": "여긴...",
+          "characterName": "",
+          "images":[
+          ],
+          "delay":100
+      },
+      {
+        "text": "(꺄아악)",
+        "characterName": "",
+        "images":[],
+        "soundKey":"",
+        "delay":1000
+      },
+      {
+        "text": "이름 모를 아이야 내가 도와줄게",
+        "characterName": "",
+        "images":[
+         ],
+        "delay":100
+      },
+      {
+        "text": "",
+        "characterName": "",
+        "images":[],
+        "soundKey":"knife",
+        "delay":1000
+      },
+      {
+        "text": "...",
+        "characterName": "",
+        "images":[
+          ],
+        "delay":100
+      },
+      {
+          "text": "어둠 속에서, 나는 그 소녀의 얼굴이 떠오른다.",
+          "characterName": "",
+          "images":[],
+          "soundKey":"",
+          "delay":100
+      },
+      {
+        "text": "내가 왜 이렇게 되었는지, 그 기억이 나를 괴롭힌다.",
+        "characterName": "",
+        "images":[],
+        "soundKey":"",
+        "delay":100
+      },
+      {
+        "text": "나는 그곳에서 도망치고 싶었다.",
+        "characterName": "",
+        "images":[],
+        "soundKey":"",
+        "delay":500
+      },
+    {
+      "text": "허나 내가 자각할 수 있을만큼 수없이 꾼 이 악몽은 끝없이 나를 집어당기고,\n이미 내 깊숙한 어둠이 새겨진 그 죄의 무게가 나를 짓누른다.",
+      "characterName": "",
+      "images":[],
+      "soundKey":"",
+      "delay":100
+    },
+    {
+      "text": "허억...!",
+      "characterName": "",
+      "images":[],
+      "soundKey":"",
+      "delay":100
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 // introScene.js
 import { Button } from './Button';
 import { ConfigPopup } from './ConfigPopup';
+import { globalVolume } from './ConfigPopup';
 
 export default class introScene extends Phaser.Scene {
     constructor() {
@@ -17,7 +18,7 @@ export default class introScene extends Phaser.Scene {
         this.load.image('configButton', './assets/icon/configButton.png');
         this.load.image('logo','./assets/icon/logo.png');
         this.load.image('credit','./assets/icon/credit.png');
-        this.load.audio('introBgm', './assets/No.8 Requiem - Esther Abrami.mp3');
+        this.load.audio('introBgm', './assets/sound/No.8 Requiem - Esther Abrami.mp3');
     }
 
     create() {
@@ -28,13 +29,12 @@ export default class introScene extends Phaser.Scene {
         this.add.image(this.scale.width / 2 -650, this.scale.height / 2 -325, 'logo').setScale(1);
 
         this.introBgm = this.sound.add('introBgm', { loop: true });
-        this.introBgm.setVolume(0.75);
+        this.introBgm.setVolume(globalVolume.volume);
         this.introBgm.play();
 
         this.startButton = new Button(this, 1750, 550, 'startButton', 0.7, () => {
             this.introBgm.stop();
-            //this.time.delayedCall(100, () => this.scene.start('cutScene',{fadeIn:true}));
-            this.time.delayedCall(100, () => this.scene.start('officeScene',{fadeIn:true}));
+            this.time.delayedCall(100, () => this.scene.start('textScene',{fadeIn:true}));
         });
 
         this.configButton = new Button(this, 1750, 675, 'configButton', 0.7, () => this.configPopup.show());

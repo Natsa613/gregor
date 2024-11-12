@@ -4,36 +4,27 @@
             "text": "",
             "characterName": "",
             "images":[
-              {"imageKey": "train","showImage": true}
             ],
             "delay":500
         },
         {
-            "text": "기차가 도착하자 그레고리는 긴장감을 느끼며 내렸다. \n마을의 분위기는 뒤숭숭했다. 마치 누군가를 위해 준비라도 한 듯 주위는 어두컴컴하고 안개가 자욱하게 깔려 있었다. \n그는 불안한 마음을 안고 요제프가 알려준 저택으로 향하는 길을 따라 걸어갔다.",
+            "text": "",
             "characterName": "",
             "images":[
-              {"imageKey": "textbox","showImage": true}
+              {"imageKey": "key_get","showImage": true}
             ],
             "delay":100
         },
         {
-          "text": "저택은 매우 공들인 건물이었다. 마치 누군가를 위해 특수히 제작된 모양새로 보인다. \n 허나 관리가 안된 탓인지 매우 공포스러운 분위기를 자아냈으며 그레고리는 문 앞에서 망설였다. \n 그리고 문을 열고 들어가자, 저택 안은 어두운 그림자로 가득 차 있었다. \n그는 조심스럽게 저택 안을 탐색하기 시작했다.",
-          "characterName": "",
+          "text": "누군진 몰라도 지독한 악취미군...\n이걸로 문을 열 수 있겠어",
+          "characterName": "그레고르",
           "images":[
-              {"imageKey": "frontdoor","showImage": true},
+              {"imageKey": "textbox","showImage": true},
               {"imageKey": "gregor","showImage": true},
-              {"imageKey": "train","showImage": false}
+              {"imageKey": "key_get","showImage": false}
             ],
           "delay":100
-        },
-        {
-            "text": "그레고리는 이상한 느낌을 감지했다. 아무래도 무언가 동떨어진... \n그리고 기차에서 내리기 전까지만 하던 굳게 다짐한 그는 불안감에 휩싸였지만, 저택의 비밀을 파헤치기 위해 계속해서 탐색을 진행했다.",
-            "characterName": "",
-            "images":[
-                {"imageKey": "gregor","showImage": true}
-              ],
-            "delay":100
-          }
+        }
     ]
 }
   

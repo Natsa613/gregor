@@ -28,7 +28,7 @@ export default class officeScene extends Phaser.Scene {
             this.cameras.main.fadeIn(100, 0, 0, 0); // 1초 동안 페이드인
         }
         this.add.image(this.scale.width / 2, this.scale.height / 2, 'office').setOrigin(0.5, 0.55).setScale(0.99);
-        this.numPuzzleImage = this.add.image(this.scale.width / 2, this.scale.height / 2, 'numPuzzle').setOrigin(0.5, 0.5).setScale(0.5).setVisible(false);
+        //this.numPuzzleImage = this.add.image(this.scale.width / 2, this.scale.height / 2, 'numPuzzle').setOrigin(0.5, 0.5).setScale(0.5).setVisible(false);
 
         this.letter = new Button(this, 1050, 700, '', 1, () => {
             console.log('Button clicked');
@@ -36,6 +36,7 @@ export default class officeScene extends Phaser.Scene {
             this.time.delayedCall(100, () => this.scene.start('talk1Scene', { fadeIn: true }));//편지 클릭시 다음 신으로
         },{useImage:false,width:150,height:150});
 
+        
         this.modal = new Modal(this, 100, 150, 300, 50); //입력 테스트
 
         this.modaltest = new Button(this, 600, 600, '', 1, () => { //입력 테스트용
@@ -43,15 +44,16 @@ export default class officeScene extends Phaser.Scene {
             this.time.delayedCall(100, () => this.modal.show());
         },{useImage:true,width:150,height:50});
 
-        this.displayedText = this.add.text(100, 300, '', { fontSize: '32px', fill: '#fff' });
+        //this.displayedText = this.add.text(100, 300, '', { fontSize: '32px', fill: '#fff' });
 
-        this.draggtest = new Button(this,300,300,'draggtest',0.1,()=>{},{useImage:true,width:150,height:50,draggable:true});
+        //this.draggtest = new Button(this,300,300,'draggtest',0.1,()=>{},{useImage:true,width:150,height:50,draggable:true});
 
         this.book = new Button(this, 1350, 150, '', 1, () => {
             console.log('Button clicked');
             this.modal.hide();
             this.time.delayedCall(100, () => this.scene.start('textPuzzle1', { fadeIn: true }));//책 클릭시 퍼즐로 이동
         },{useImage:false,width:150,height:150});
+        
     /*
     // numPuzzle 버튼 클릭 시 numPuzzleImage 보이기
     this.numPuzzle = new Button(this, 1350, 150, '', 1, () => {

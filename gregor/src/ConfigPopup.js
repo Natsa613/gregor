@@ -1,6 +1,10 @@
 // ConfigPopup.js
 import { formatValue } from './utils';
 
+export const globalVolume = {
+    volume : 0.25 //기본값
+};
+
 export class ConfigPopup {
     constructor(scene) {
         this.scene = scene;
@@ -16,11 +20,12 @@ export class ConfigPopup {
 
         this.closeButton = this.createText(1150, 220, 'X', 11, () => this.hide());
         this.configText = this.createText(600, 300, '게임 설정 변경', 11);
+
         this.soundConfigText = this.createText(500, 400, '배경음악', 11);
-        this.soundConfigValue = this.createText(1000, 400, '75.00', 11);
+        this.soundConfigValue = this.createText(1000, 400, '25.00', 11);
         this.soundSlider = this.createSlider(750, 400, (value) => {
             this.soundConfigValue.setText(formatValue(value * 100, 2));
-            this.scene.introBgm.setVolume(value);
+            globalVolume.volume = value;
         });
 
         this.textspeedConfigText = this.createText(500, 600, '텍스트 속도', 11);
